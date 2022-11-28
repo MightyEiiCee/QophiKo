@@ -3,20 +3,21 @@
 :root{
     --main-color:#d3ad7f;
     --black:#13131a;
-    --bg:#010103;
+    --bg:#010103; 
     --border:.1rem solid rgba(255,255,255,.3);
     --primary-color: #000000;
     --secondary-color:  #edf2fc;
     --tertiary-color: .1rem solid rgb(255, 255, 255);
     --fourth-color: rgba(255,255,255,.3);
     --text-color: #fff;
+    
 }
 .light-theme{
     --primary-color: #fff;
     --secondary-color:  #000106;
     --tertiary-color: .1rem solid rgb(0, 0, 0);
     --fourth-color: rgba(107, 102, 102, 0.74);
-    transition: 2s;
+    transition: .2s;
 }
 *{
     font-family: 'Roboto', sans-serif;
@@ -25,7 +26,7 @@
     outline: none; border:none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
+    transition: .2s ;
 }
 
 html{
@@ -106,8 +107,8 @@ section{
 }
 
 .header .navbar a:hover{
-    color:var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
+    color:var(--secondary-color);
+    border-bottom: .1rem solid var(--secondary-color);
     padding-bottom: .5rem;
 }
 
@@ -118,18 +119,11 @@ section{
     margin-left: 2rem;
     
 }
-.header .icons img{
-    color:var(--secondary-color);
-    cursor: pointer;
-    font-size: 2.5rem;
-    margin-left: 2rem;
-    
-}
 /* Start L or D Mode */
 .header .icons img{
     cursor: pointer;
-    margin-left: 2rem;
-    width: 30px;
+    margin-left: 3rem;
+    width: 2rem;
     flex: 1;
     
 }
@@ -235,7 +229,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:linear-gradient(rgba(0,0,0,0.97),rgba(0,0,0,0.7),rgba(0,0,0,0.97)),url(../images/BG.jpg) no-repeat;
+    background:linear-gradient(rgba(0,0,0,0.97),rgba(0,0,0,0.7),rgba(0,0,0,0.97)),url(../images/bg/BG.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -257,7 +251,66 @@ section{
     padding:1rem 0;
     color:var(--text-color);
 }
+/* FEATURES */
+.features .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap:1.5rem;
+}
 
+.features .box-container .box{
+    text-align: center;
+    border:var(--tertiary-color);
+    padding: 2rem;
+}
+
+.features .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border:var(--border);
+    color:var(--secondary-color);
+    margin:.3rem;
+}
+
+.features .box-container .box .icons a:hover{
+    background:var(--main-color);
+}
+
+.features .box-container .box .image{
+    padding: 2.5rem 0;
+}
+
+.features .box-container .box .image img{
+    height: 15rem;
+}
+
+.features .box-container .box .content h3{
+    color:var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.features .box-container .box .content .stars{
+    padding: 1.5rem;
+}
+
+.features .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+}
+
+.features .box-container .box .content .price{
+    color:var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.features .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+/* END */
 .about .row{
     display: flex;
     align-items: center;
@@ -283,7 +336,7 @@ section{
 }
 
 .about .row .content p{
-    font-size: 1.6rem;
+    font-size: 2rem;
     color:var(--secondary-color);
     padding:1rem 0;
     line-height: 1.8;
@@ -330,6 +383,7 @@ section{
 .menu .box-container .box:hover > *{
     color:var(--secondary-color);
 }
+
 
 .products .box-container{
     display: grid;
@@ -529,6 +583,20 @@ section{
 .footer .credit span{
     color:var(--secondary-color);
 }
+.footer .credit a:link{
+    color:var(--secondary-color);
+}
+.footer .credit a:active{
+    color:var(--secondary-color);
+}
+.footer .credit a:visited{
+    color:var(--secondary-color);
+}
+.footer .credit a:hover{
+    color:var(--secondary-color);
+    border-bottom: .1rem solid var(--secondary-color);
+    padding-bottom: .5rem;
+}
 
 
 
@@ -574,12 +642,6 @@ section{
         padding:.5rem;
         font-size: 2rem;
     }
-
-    .header .search-form{
-        width: 90%;
-        right: 2rem;
-    }
-
     .home{
         background-position: left;
         justify-content: center;
